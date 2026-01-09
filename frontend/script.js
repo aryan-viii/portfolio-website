@@ -12,6 +12,8 @@ function fetchProjects() {
             <h4>${project.title}</h4>
             <p>${project.description}</p>
 
+            ${project.image ? `<img src="${project.image}" width="200" class="mb-2">` : ""}
+
             <button class="btn btn-warning btn-sm me-2"
               onclick="editProject(${index}, '${project.title}', '${project.description}')">
               Edit
@@ -32,17 +34,24 @@ function fetchProjects() {
 function addProject() {
   const title = document.getElementById("title").value;
   const description = document.getElementById("description").value;
+  const image = document.getElementById("image").files[0];
+
+  const formData = new FormData();
+  formData.append("title", title);
+  formData.append("description", description);
+  formData.append("image", image);
 
   fetch("/projects", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ title, description })
+    body: formData
   }).then(() => {
     fetchProjects();
     document.getElementById("title").value = "";
     document.getElementById("description").value = "";
+    document.getElementById("image").value = "";
   });
 }
+
 
 // UPDATE
 function editProject(index, oldTitle, oldDescription) {
