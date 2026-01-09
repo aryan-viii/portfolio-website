@@ -4,8 +4,8 @@
     "description": "Personal responsive website"
   },
   {
-    "title": "python blog",
-    "description": "python",
-    "image": "/uploads/1767978050156-Screenshot 2022-11-27 194822.png"
+    "title": "Full Stack Portfolio Website",
+    "description": "Full Stack portfolio website built using HTML, CSS, Bootstrap, Node.js, and Express.  Features Responsive UI CRUD operations Image upload using Multer REST API backend",
+    "image": "/uploads/1767982919731-ben-kolde-bs2Ba7t69mM-unsplash.jpg"
   }
 ]
