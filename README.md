@@ -35,7 +35,11 @@ portfolio-static/
 - Data persists after page refresh
 
 ## Hosting
-This version is deployed using GitHub Pages or any static hosting platform.
+
+The static version of this portfolio website is hosted using **GitHub Pages** and is publicly accessible at:
+
+https://aryan-viii.github.io/portfolio-website/
+
 
 ## Note
 The full stack version with backend support is available in the `main` branch.
